@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <Index />,
   },
   {
-    path: "/empleabilidad",
+    path: "/Empleabilidad",
     element: <Empleabilidad />,
   }, 
   {

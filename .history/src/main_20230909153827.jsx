@@ -4,7 +4,7 @@ import './index.css'
 import Index from './Index.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Calculator from './assets/calculator/Calculator';
-import Empleabilidad from './Empleabilidad/Empleabilidad'; 
+import Empleabilidad from '../Empleabilidad/Empleabilidad';
 import Education from './assets/Education/Education';
 import Navigator from './assets/Navigator';
 
@@ -15,9 +15,9 @@ const router = createBrowserRouter([
     element: <Index />,
   },
   {
-    path: "/empleabilidad",
+    path: "/Empleabilidad",
     element: <Empleabilidad />,
-  }, 
+  },
   {
     path: "/educacion",
     element: <Education/>

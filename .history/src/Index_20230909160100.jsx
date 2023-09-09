@@ -29,7 +29,7 @@ const Index = () => {
       </button>
       <button 
           onClick={handleEmpleabilidadClick} 
-          className="bg-greenM hover:bg-Emeraldy-700 text-white font-bold py-2 px-4 rounded m-2 w-48">
+          className="bg-fourty hover:bg-Emeraldy-700 text-white font-bold py-2 px-4 rounded m-2 w-48">
           Empleabilidad
       </button>
      
