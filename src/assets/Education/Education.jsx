@@ -1,29 +1,39 @@
+import { useEffect, useState } from "react"
+import educationDB from "../../DB/EducationDB"
 import EducationCard from "./EducationCard"
 
 const Education = () => {
-    return (
-        <div className="education">
-            <h2 className="font-medium">Educación</h2>
-            <div>
-                <h3 className="font-medium">Aprende ahora</h3>
-                <p>Aprende a ahorrar y manejar mejor tus finanzas</p>
-            </div>
+    const [ dB, setDB ] = useState([])
+    const [ first, setFirst ] = useState([])
+    useEffect( () => {
+        let list = educationDB()
+        list.pop()
+        setFirst( list[1] )
+        setDB( list )
+    }, [])
 
+    return (
+        <div className="flex flex-col gap-10 p-5">
+            <h2 className="font-medium text-6xl font-bold">Educación</h2>
             <div className="flex flex-col items-center gap-1">
-                <div className="principal-card border-greenM border w-5/6 bg-white">
+                <div className="principal-card border w-11/12 bg-white flex-col sm:flex-row">
                     <img src="https://img.freepik.com/vector-premium/ilustracion-vector-luz-bombilla_516670-384.jpg?w=2000" alt="w" 
-                    className="w-[200px]"/>
+                    className="w-[200px] h-[200px]"/>
                     <div>
-                        <h3>title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate rem, dolore aut alias fugiat vero expedita doloremque. Hic, quasi laudantium vitae, dolor placeat molestiae incidunt officiis ipsum nostrum odit sapiente.</p>
-                        <div className="flex item-left justify-end ">
-                            <button className="rounded-lg p-6 bg-greenM text-white font-medium">Leer</button>
+                        <h3 className="font-medium text-[30px]">{first.name}</h3>
+                        <p>{first.content}</p>
+                        <div className="flex item-left justify-center sm:justify-end">
+                            <a href={"educacion/"+first.name} >
+                                <button className="rounded-lg p-4 bg-greenM text-white font-medium w-[120px] ">Leer</button>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
-                <div className="w-5/6 flex gap-1">
-                    <EducationCard title="Onomatopeya"/>
-                    <EducationCard/>
+                <div className="w-11/12 grid gap-1 grid-cols-1 sm:grid-cols-2">
+                    {
+                        dB.map( i => <EducationCard title={i.name} key={i}/> )
+                    }
                 </div>
             </div>
 
