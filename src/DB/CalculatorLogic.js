@@ -1,9 +1,15 @@
+/*  Logica de calculadora   -< Retorna String con recomendacion segun parametros dados.
+  Steps: importar funcion del componente -> import getRecommendation from "./CalculatorLogic.js";
+  - Utilizar la funcion getRecommendation(i, e) con:
+      - i = ingresos (income);
+      - e = egresos (expenses);
+      
+  */
 
-
-const getRecommendation = (i, e) => {
+const getRecommendation = (income, expenses) => {
   let recommendation = [];
-  let result = (i - e);
-  let savingsRate = ((result / i) * 100).toFixed(2);
+  let result = (income - expenses);
+  let savingsRate = ((result / income) * 100).toFixed(2);
   let savingsNum = Number(savingsRate);
 
   if (savingsNum  <= 0) {
