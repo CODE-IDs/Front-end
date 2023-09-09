@@ -2,10 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 // import Index from './Index.jsx'
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Calculator from "./assets/calculator/Calculator";
-import Education from "./assets/Education/Education";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Calculator from './assets/calculator/Calculator';
+import Education from './assets/Education/Education';
+import Navigator from './assets/Navigator';
+import Learn from './assets/Education/Learn';
 import { ChakraProvider } from "@chakra-ui/react";
+
+
 
 const router = createBrowserRouter([
   {
@@ -14,8 +18,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/educacion",
-    element: <Education />,
+    element: <Education/>
   },
+  {
+    path: "/educacion/:name",
+    element: <Learn/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
