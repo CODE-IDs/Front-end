@@ -4,7 +4,6 @@ import './index.css'
 import Index from './Index.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Calculator from './assets/calculator/Calculator';
-import Empleabilidad from '../Empleabilidad/Empleabilidad.jsx'; 
 
 
 const router = createBrowserRouter([
@@ -13,9 +12,10 @@ const router = createBrowserRouter([
     element: <Index />,
   },
   {
-    path: "/Empleabilidad",
-    element: <empleabilidad />,
+    path: "/",
+    element: <Index />,
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

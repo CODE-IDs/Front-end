@@ -4,7 +4,7 @@ import './index.css'
 import Index from './Index.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Calculator from './assets/calculator/Calculator';
-import Empleabilidad from '../Empleabilidad/Empleabilidad.jsx'; 
+import empleabilidad from '../empleabilidad/Empleabilidad.jsx';
 
 
 const router = createBrowserRouter([
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <Index />,
   },
   {
-    path: "/Empleabilidad",
+    path: "/mpleabilidad",
     element: <empleabilidad />,
   },
 ]);
