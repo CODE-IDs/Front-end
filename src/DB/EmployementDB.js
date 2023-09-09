@@ -1,6 +1,6 @@
 /**
  * Base de datos de Empleo
- * import employmentBD from "./EducationDB.js";
+ * import employmentDB from "../DB/EmployementDB.js";
  * 
  * Formato de item: 
  *  {
