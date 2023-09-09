@@ -7,7 +7,10 @@ const EducationCard = ({ title = "Mangos rosados", img = IMG }) => {
             className="w-[100px]"/>
             <div className="w-full flex flex-col justify-between">
                 <h3 className="font-medium break-all">{ title }</h3>
-                <button className="rounded-lg p-2 bg-greenM text-white font-medium w-full">Leer</button>
+                <a href={"educacion/"+title} >
+                    <button className="rounded-lg p-2 bg-greenM text-white font-medium w-full">Leer</button>
+                </a>
+                
             </div>
         </div>
     )

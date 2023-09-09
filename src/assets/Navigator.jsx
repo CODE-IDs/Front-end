@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react"
-
 const Navigator = () => {
     let isHome = window.location.pathname == "/"
 

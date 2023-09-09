@@ -23,7 +23,10 @@ const Education = () => {
                         <h3 className="font-medium text-[30px]">{first.name}</h3>
                         <p>{first.content}</p>
                         <div className="flex item-left justify-center sm:justify-end">
-                            <button className="rounded-lg p-4 bg-greenM text-white font-medium w-[120px] ">Leer</button>
+                            <a href={"educacion/"+first.name} >
+                                <button className="rounded-lg p-4 bg-greenM text-white font-medium w-[120px] ">Leer</button>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
