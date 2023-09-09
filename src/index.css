@@ -19,5 +19,6 @@ html {
   display: flex;
   padding: 12px;
   border-radius: 14px;
+  align-items: center;
   gap: 12px;
 }
