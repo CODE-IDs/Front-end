@@ -1,4 +1,5 @@
-/*  Logica de calculadora   -< Retorna String con recomendacion segun parametros dados.
+/*  Logica de calculadora   -> Retorna String con recomendacion segun parametros dados.
+
   Steps: importar funcion del componente -> import getRecommendation from "./CalculatorLogic.js";
   - Utilizar la funcion getRecommendation(i, e) con:
       - i = ingresos (income);
