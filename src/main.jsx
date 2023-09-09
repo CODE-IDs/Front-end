@@ -4,7 +4,12 @@ import './index.css'
 import Index from './Index.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Calculator from './assets/calculator/Calculator';
+<<<<<<< HEAD
 import Empleabilidad from '../Empleabilidad/Empleabilidad.jsx'; 
+=======
+import Education from './assets/Education/Education';
+import Navigator from './assets/Navigator';
+>>>>>>> a2b2bdc25fea86792a1309206871ebb2f6cd2e65
 
 
 const router = createBrowserRouter([
@@ -16,10 +21,15 @@ const router = createBrowserRouter([
     path: "/Empleabilidad",
     element: <empleabilidad />,
   },
+  {
+    path: "/educacion",
+    element: <Education/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Navigator/>
   </React.StrictMode>,
 )
