@@ -1,6 +1,17 @@
+import { useEffect, useState } from "react"
+import educationDB from "../../DB/EducationDB"
 import EducationCard from "./EducationCard"
 
 const Education = () => {
+    const [ dB, setDB ] = useState([])
+    const [ first, setFirst ] = useState([])
+    useEffect( () => {
+        let list = educationDB()
+        list.pop()
+        setFirst( list[1] )
+        setDB( list )
+    }, [])
+
     return (
         <div className="flex flex-col gap-10 p-5">
             <h2 className="font-medium text-6xl font-bold">Educación</h2>
@@ -9,16 +20,17 @@ const Education = () => {
                     <img src="https://img.freepik.com/vector-premium/ilustracion-vector-luz-bombilla_516670-384.jpg?w=2000" alt="w" 
                     className="w-[200px] h-[200px]"/>
                     <div>
-                        <h3 className="font-medium text-[30px]">title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate rem, dolore aut alias fugiat vero expedita doloremque. Hic, quasi laudantium vitae, dolor placeat molestiae incidunt officiis ipsum nostrum odit sapiente.</p>
-                        <div className="flex item-left justify-end ">
+                        <h3 className="font-medium text-[30px]">{first.name}</h3>
+                        <p>{first.content}</p>
+                        <div className="flex item-left justify-center sm:justify-end">
                             <button className="rounded-lg p-4 bg-greenM text-white font-medium w-[120px] ">Leer</button>
                         </div>
                     </div>
                 </div>
-                <div className="w-11/12 flex gap-1">
-                    <EducationCard title="Onomatopeya"/>
-                    <EducationCard/>
+                <div className="w-11/12 grid gap-1 grid-cols-1 sm:grid-cols-2">
+                    {
+                        dB.map( i => <EducationCard title={i.name}/> )
+                    }
                 </div>
             </div>
 

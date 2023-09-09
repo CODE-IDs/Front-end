@@ -2,7 +2,7 @@ const IMG = "https://img.freepik.com/vector-premium/ilustracion-vector-luz-bombi
 
 const EducationCard = ({ title = "Mangos rosados", img = IMG }) => {
     return(
-        <div className="principal-card border w-1/2 bg-white">
+        <div className="principal-card border w-full bg-white">
             <img src={img} alt="w" 
             className="w-[100px]"/>
             <div className="w-full flex flex-col justify-between">
