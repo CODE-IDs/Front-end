@@ -5,14 +5,16 @@ const Calculator = () => {
   const [income, setIncome] = useState();
   const [expense, setExpense] = useState();
   const [isDisabledButton, setIsDisabledButton] = useState(true);
-  const [dataSave, setDataSave] = useState();
+  const [dataSave, setDataSave] = useState({
+    income,
+    expense
+  });
 
   const Save = () => {
-    const data = {
-      income,
-      expense,
-    };
-    setDataSave(data);
+    setDataSave({
+        income: Number(income),
+        expense: Number(expense),
+    });
   };
 
   useEffect(() => {
@@ -24,16 +26,16 @@ const Calculator = () => {
   }, [income, expense]);
 
   return (
-    <div className="w-screen  h-auto">
+    <div className="w-screen h-auto min-h-screen body">
       <div className="p-10 w-full m-auto flex flex-col ">
-        <h1 className="lg:text-[150px] text-6xl font-bold text-third mb-20">
+        <h1 className="lg:text-[150px] text-center text-6xl font-bold text-third mb-20">
           Calculadora
         </h1>
         {/* <button className="rounded-lg p-6 bg-fourty text-white font-medium">
           get ready
         </button> */}
-        <section className="flex gap-32 px-10">
-          <div className="flex flex-col gap-8 bg-white px-4 py-10 items-center rounded-lg max-w-max shadow-sm ">
+        <section className="flex lg:flex-row flex-col gap-16 lg:gap-32 items-center lg:items-start lg:px-10">
+          <div className="flex flex-col gap-8 w-full bg-white px-4 py-10 items-center rounded-lg  shadow-sm ">
             <div className="flex lg:flex-row flex-col items-center  justify-between gap-5">
               <p className="text-greenM  font-semibold text-3xl">
                 Ingresos Mensuales:
