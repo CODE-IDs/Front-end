@@ -5,7 +5,6 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Calculator from './assets/calculator/Calculator';
 import Education from './assets/Education/Education';
-import Navigator from './assets/Navigator';
 import Learn from './assets/Education/Learn';
 import { ChakraProvider } from "@chakra-ui/react";
 

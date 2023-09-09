@@ -32,7 +32,7 @@ const Education = () => {
                 </div>
                 <div className="w-11/12 grid gap-1 grid-cols-1 sm:grid-cols-2">
                     {
-                        dB.map( i => <EducationCard title={i.name}/> )
+                        dB.map( i => <EducationCard title={i.name} key={i}/> )
                     }
                 </div>
             </div>
